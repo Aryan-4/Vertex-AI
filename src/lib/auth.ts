@@ -1,11 +1,10 @@
 import { PrismaAdapter } from '@auth/prisma-adapter'
-import { NextAuthOptions, User } from 'next-auth'
+import { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GoogleProvider from 'next-auth/providers/google'
 import GitHubProvider from 'next-auth/providers/github'
 import prisma from '@/lib/prisma'
 import { compare } from 'bcrypt'
-import { JWT } from 'next-auth/jwt'
 
 // Extend the session types to include user.id
 declare module 'next-auth' {
